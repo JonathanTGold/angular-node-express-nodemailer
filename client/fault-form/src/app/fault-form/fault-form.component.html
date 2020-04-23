@@ -1,0 +1,16 @@
+<div class="container">
+    <form  id="contact" #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+        <h3>Contact us</h3>
+        <h4>blh bla blh</h4>
+        <fieldset>
+            <input placeholder="subject" type="text" name="subject" ngModel autofocus>
+        </fieldset>
+        <fieldset>
+            <textarea placeholder="Type your message here...."  name="body" ngModel></textarea>
+        </fieldset>
+        <fieldset>
+            <input class="input-file" type="file" (change)="onFileSelected($event)">
+            <button class="contact-submit">send</button>
+        </fieldset>
+    </form>
+</div>
