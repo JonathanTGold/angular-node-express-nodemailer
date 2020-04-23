@@ -1,7 +1,13 @@
 const nodemailer = require("nodemailer");
 
-const senderAccount = { user: 'jonathan.gold86@gmail.com', password: '0546786671' };
-const reciverAccount = { user: 'yta828@gmail.com', password: '0546786671' };
+const senderAccount = {
+    user: 'aaaaaaaaa@gmail.com',
+    password: '000000000'
+};
+const reciverAccount = {
+    user: 'bbbbbbbbb@gmail.com',
+    password: '000000000'
+};
 
 const transporter = nodemailer.createTransport({
     //host: "smtp.gmail.com",
@@ -19,12 +25,12 @@ async function sendMail(application) {
         from: senderAccount.user,
         to: reciverAccount.user,
         subject: application.subject,
-        html: "<h1>And here is the place for HTML</h1>",
+        //html: "<h1>And here is the place for HTML</h1>",
         text: application.body,
         attachments: [
             {
-                filename: application.content.filename,
-                content: application.content.content,
+                filename: application.attachments.filename,
+                content: application.attachments.content,
                 encoding: 'base64'
             }
         ]
@@ -32,9 +38,6 @@ async function sendMail(application) {
 
     const sentMessageInfo = await transporter.sendMail(mailOptions);
     return sentMessageInfo;
-
 }
 
-module.exports = {
-    sendMail
-};
+module.exports = { sendMail };

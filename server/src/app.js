@@ -11,14 +11,13 @@ var corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ limit: '50mb' }));
+app.use(express.json({ limit: '5mb' }));
 
 app.use(bodyParser.json());
 
 app.post("/sendmail", async (req, res) => {
     console.log("request came");
-    let application = req.body;
+    const application = req.body;
 
     try {
         const sentMessageInfo = await mailSender.sendMail(application);
