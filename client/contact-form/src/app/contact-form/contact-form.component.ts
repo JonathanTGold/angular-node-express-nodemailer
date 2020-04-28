@@ -18,9 +18,7 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() { }
 
   onSubmit(form: NgForm) {
-    console.log(form.value);
     form.value.attachments = this.fileData;
-    console.log(form.value);
     this.sendMail(form.value);
   }
 

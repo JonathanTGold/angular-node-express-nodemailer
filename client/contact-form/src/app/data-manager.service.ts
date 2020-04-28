@@ -10,7 +10,7 @@ const headers = new HttpHeaders()
 })
 export class DataManagerService {
 
-  private url: string = 'http://localhost:3000';  // URL to web api
+  private url: string = 'http://localhost:3000';
   private httpOptions: any = { headers: headers };
 
   constructor(private http: HttpClient) { }

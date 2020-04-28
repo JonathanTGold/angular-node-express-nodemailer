@@ -1,23 +1,14 @@
-
-
-/* #contact input[type="text"]:hover,
-#contact input[type="email"]:hover */
-
-* {
-  font-family: sans-serif;
-}
-
 form {
   display: flex;
   flex-direction: column;
-  background-color: #e5e1e1;
-  padding: 10px;
+  background-color: #f1eaea;
+  padding: 25px;
   width: 500px;
   font-family: sans-serif;
 }
 
 section {
-  margin: 10px 8px;
+  margin: 20px 8px;
 }
 
 .center {
@@ -36,6 +27,7 @@ input {
 }
 
 input , textarea {
+  padding: 10px;
   width: 100%;
   border: none;
     font-size: 15px;
@@ -55,18 +47,21 @@ textarea:focus, input:focus{
 }
 
 button {
-  width: 100%;
+  width: 90%;
   border: none;
-  background: black;
+  background: #4caf50;
   color: white;
-  padding: 10px;
+  padding: 20px;
   font-size: 20px;
 }
 
 button:hover {
-  background: white;
-  color: black;
-  border: 1px solid black;
+  background: #2e7832;
+}
+
+.send-section {
+  text-align: center;
+  margin-bottom: 0 !important;
 }
 
 .label {
@@ -78,6 +73,7 @@ button:hover {
 .header {
   font-size:50px;
   margin: 30px;
+  font-weight: 700;
 }
 
 .file-input-label {
@@ -88,7 +84,16 @@ button:hover {
   width: 160px;
   height: 40px;
   position: relative;
+  background-color: #006064;
+  color: white;
   margin: 0 auto;
+}
+
+.file-input-container:hover {
+  background-color: white;
+  color: #006064;
+  border: 1px solid #006064;
+  font-weight: 550;
 }
 
 
@@ -103,13 +108,10 @@ button:hover {
 
 .file-input {
   opacity: 0;
-  background-color: blueviolet;
   z-index: 200;
 }
 
 .file-input-text {
-  background-color: black;
-  color: white;
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -119,8 +121,3 @@ button:hover {
 fa-icon {
   margin-right: 10px;
 }
-
-/* .file-input-label,
-fa-icon {
-  font-size: 15px;
-} */
