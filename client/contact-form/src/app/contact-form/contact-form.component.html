@@ -1,0 +1,27 @@
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+    <section class="center">
+        <div class="header">Contact us</div>
+    </section>
+    <section>
+        <div class="label">Subject</div>
+        <input placeholder="subject" type="text" name="subject" ngModel autofocus>
+    </section>
+    <section>
+        <div class="label">Your message</div>
+        <textarea placeholder="Type your message here...." name="body" ngModel></textarea>
+    </section>
+    <section class="center">
+        <div class="file-input-label">Attach a screenshot</div>
+        <div class="file-input-container">
+            <div class="file-input-text">
+                <fa-icon [icon]="faUpload"></fa-icon>
+                <span>Choose a file...</span>
+            </div>
+            <input class="file-input" type="file" (change)="onFileSelected($event)" multiple accept="image/*">
+        </div>
+    </section>
+    <section>
+        <button class="contact-submit">send</button>
+    </section>
+</form>
