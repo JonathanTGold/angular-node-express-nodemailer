@@ -11,6 +11,7 @@ import { faUpload } from '@fortawesome/free-solid-svg-icons';
 })
 export class ContactFormComponent implements OnInit {
   fileData: any[] = [];
+  preview: any[] = [];
   faUpload = faUpload;
 
   constructor(private dataManagerService:DataManagerService) { }
@@ -34,6 +35,7 @@ export class ContactFormComponent implements OnInit {
             content: reader.result.split(',')[1]
           }
           this.fileData.push(fileData);
+          this.preview.push(reader.result);
         };
       }
     }

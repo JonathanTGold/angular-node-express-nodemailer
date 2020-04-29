@@ -1,14 +1,14 @@
 form {
   display: flex;
   flex-direction: column;
-  background-color: #f1eaea;
-  padding: 25px;
+  background-color: white;
   width: 500px;
   font-family: sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 section {
-  margin: 20px 8px;
+  margin: 20px 40px;
 }
 
 .center {
@@ -29,9 +29,8 @@ input {
 input , textarea {
   padding: 10px;
   width: 100%;
-  border: none;
     font-size: 15px;
-  border: 1px solid #bebebe;
+    border: 1px solid #06454d;
     -webkit-transition: all .30s ease-in-out;
     -moz-transition: all .30s ease-in-out;
     -ms-transition: all .30s ease-in-out;
@@ -47,21 +46,19 @@ textarea:focus, input:focus{
 }
 
 button {
-  width: 90%;
+  padding: 15px 50px;
   border: none;
-  background: #4caf50;
+  background: var(--form-color);
   color: white;
-  padding: 20px;
   font-size: 20px;
 }
 
 button:hover {
-  background: #2e7832;
+  background: #013a3c;
 }
 
 .send-section {
-  text-align: center;
-  margin-bottom: 0 !important;
+  direction: rtl;
 }
 
 .label {
@@ -71,9 +68,11 @@ button:hover {
 }
 
 .header {
-  font-size:50px;
-  margin: 30px;
-  font-weight: 700;
+  font-size:30px;
+  /* margin: 30px; */
+  padding: 15px;
+  font-weight: 500;
+  color: white;
 }
 
 .file-input-label {
@@ -84,15 +83,15 @@ button:hover {
   width: 160px;
   height: 40px;
   position: relative;
-  background-color: #006064;
+  background-color: var(--form-color);
   color: white;
   margin: 0 auto;
 }
 
 .file-input-container:hover {
   background-color: white;
-  color: #006064;
-  border: 1px solid #006064;
+  color: var(--form-color);
+  border: 1px solid var(--form-color);
   font-weight: 550;
 }
 
@@ -120,4 +119,43 @@ button:hover {
 
 fa-icon {
   margin-right: 10px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.preview-galery {
+  display: flex;flex-wrap: wrap;
+  height: 100px;
+  justify-content: center;
+  border-top: 1px solid black;
+  padding-top: 7px;
+  overflow-y: scroll;
+}
+
+.preview-line {
+  width: 30%;
+  height: 100%;
+   padding: 0px;
+   background: white;
+   border: 3px solid  #cddfdd;
+   margin: 3px;
+}
+
+.header-section {
+  background: var(--form-color);
+  margin: 0;
+  text-align: center;
+}
+
+.two-column-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.file-input-section {
+  text-align: center;
 }
