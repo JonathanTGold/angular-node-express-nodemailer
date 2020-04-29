@@ -133,7 +133,11 @@ img {
   justify-content: center;
   border-top: 1px solid black;
   padding-top: 7px;
+}
+
+.overflow-scrol {
   overflow-y: scroll;
+
 }
 
 .preview-line {

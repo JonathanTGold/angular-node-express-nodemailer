@@ -22,7 +22,7 @@
     </section>
     <section *ngIf="preview.length">
         <div class="label">Preview</div>
-        <div class="preview-galery">
+        <div class="preview-galery" [class.overflow-scrol]="preview.length > 3">
             <div *ngFor="let img of preview" class="preview-line">
                 <img [src]="img" alt="">
             </div>
