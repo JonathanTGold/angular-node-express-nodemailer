@@ -7,11 +7,11 @@
         <input placeholder="subject" type="text" name="subject" ngModel autofocus>
     </section>
     <section class="two-column-section">
-        <div>
+        <div style="width: 47%;">
             <div class="label">E-mail</div>
             <input placeholder="email" type="email" name="email" ngModel autofocus>
         </div>
-        <div>
+        <div style="width: 47%;">
             <div class="label">Phone</div>
             <input placeholder="phone" type="tel" name="phone" ngModel autofocus>
         </div>
@@ -20,23 +20,25 @@
         <div class="label">Your message</div>
         <textarea placeholder="Type your message here...." name="body" ngModel></textarea>
     </section>
-    <section *ngIf="preview.length">
-        <div class="label">Preview</div>
-        <div class="preview-galery" [class.overflow-scrol]="preview.length > 3">
-            <div *ngFor="let img of preview" class="preview-line">
-                <img [src]="img" alt="">
+    <section>
+        <div class="label">Attachments</div>
+        <div [class.overflow-scrol]="preview.length > 3" class="attachments-conteinr">
+            <div class="preview-galery">
+                <div *ngFor="let img of preview" class="preview-line page foldtl">
+                    <fa-icon [icon]="faPaperclip"></fa-icon>
+                    <img [src]="img" alt="">
+                </div>
             </div>
         </div>
     </section>
     <section class="file-input-section">
-        <div *ngIf="!preview.length" class="file-input-label">Attach a screenshot</div>
+        <div class="file-input-label">Attach a screenshot</div>
         <div class="file-input-container">
             <div class="file-input-text">
                 <fa-icon [icon]="faUpload"></fa-icon>
-                <span *ngIf="!preview.length">Choose a file...</span>
-                <span *ngIf="preview.length">add...</span>
+                <span>Choose a file...</span>
             </div>
-            <input class="file-input" type="file" (change)="onFileSelected($event)" multiple accept="image/*">
+            <input class="file-input" type="file" (change)="onSelectedFile($event)" multiple accept="image/*">
         </div>
     </section>
     <section class="send-section">

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {DataManagerService} from '../data-manager.service';
 
-import { faUpload } from '@fortawesome/free-solid-svg-icons';
+import { faUpload, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,6 +13,7 @@ export class ContactFormComponent implements OnInit {
   fileData: any[] = [];
   preview: any[] = [];
   faUpload = faUpload;
+  faPaperclip = faPaperclip;
 
   constructor(private dataManagerService:DataManagerService) { }
 
@@ -23,7 +24,7 @@ export class ContactFormComponent implements OnInit {
     this.sendMail(form.value);
   }
 
-  onFileSelected(event) {
+  onSelectedFile(event) {
     const files: File[] = event.target.files;
     if (files && files.length > 0) {
       for (let file of files) {

@@ -2,7 +2,7 @@ form {
   display: flex;
   flex-direction: column;
   background-color: white;
-  width: 500px;
+  width: 550px;
   font-family: sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -124,29 +124,28 @@ fa-icon {
 img {
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .preview-galery {
-  display: flex;flex-wrap: wrap;
+  display: inline-flex;
+  flex: 1;
+  padding: 7px;
+  border-top: 0.5px solid #9E9E9E;
   height: 100px;
-  justify-content: center;
-  border-top: 1px solid black;
-  padding-top: 7px;
 }
 
 .overflow-scrol {
-  overflow-y: scroll;
-
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .preview-line {
-  width: 30%;
-  height: 100%;
-   padding: 0px;
-   background: white;
-   border: 3px solid  #cddfdd;
-   margin: 3px;
+  width: 100px;
+  /* height: 70px; */
+  margin: 5px 7px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  position: relative;
 }
 
 .header-section {
@@ -162,4 +161,65 @@ img {
 
 .file-input-section {
   text-align: center;
+  margin-top: 0 !important;
+}
+
+
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--form-color); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #014e51; 
+}
+
+.preview-line fa-icon {
+  color: grey;
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  top: -6px;
+}
+
+.attachments-conteinr {
+  display: flex;
+}
+
+/* ------------------------------ */
+
+.foldtl {
+  position: relative;
+}
+ 
+.foldtl:before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 0px;
+  height: 0px;
+  border-top: 17px solid #eee;
+  border-left: 17px solid transparent;
+  -webkit-box-shadow: -7px -7px -7px rgba(0,0,0,0.3);
+  -moz-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+  box-shadow: -7px -7px -7px rgba(0,0,0,0.3);
+}
+ 
+.foldtl:after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 0px;
+  height: 0px;
+  border-bottom: 16px solid white; 
+  border-right: 16px solid rgba(158, 158, 158, 0.7);
 }
