@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {DataManagerService} from '../data-manager.service';
 
-import { faUpload, faPaperclip } from '@fortawesome/free-solid-svg-icons';
+import { faUpload, faPaperclip, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,6 +14,7 @@ export class ContactFormComponent implements OnInit {
   preview: any[] = [];
   faUpload = faUpload;
   faPaperclip = faPaperclip;
+  faAngleDoubleRight = faAngleDoubleRight;
 
   constructor(private dataManagerService:DataManagerService) { }
 

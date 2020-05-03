@@ -46,11 +46,12 @@ textarea:focus, input:focus{
 }
 
 button {
-  padding: 15px 50px;
+  padding: 15px 37px 15px 50px;  
   border: none;
   background: var(--form-color);
   color: white;
-  font-size: 20px;
+  font-size: 25px;
+  letter-spacing: 0.5px;
 }
 
 button:hover {
@@ -65,12 +66,13 @@ button:hover {
   margin-bottom: 3px;
   font-weight: bold !important;
   font: 15px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: #453b3b;
 }
 
 .header {
   font-size:30px;
-  /* margin: 30px; */
-  padding: 15px;
+  font-family: ariel;
+  letter-spacing: 2px;  padding: 15px;
   font-weight: 500;
   color: white;
 }
@@ -83,16 +85,16 @@ button:hover {
   width: 160px;
   height: 40px;
   position: relative;
-  background-color: var(--form-color);
-  color: white;
   margin: 0 auto;
-}
-
-.file-input-container:hover {
   background-color: white;
   color: var(--form-color);
   border: 1px solid var(--form-color);
   font-weight: 550;
+}
+
+.file-input-container:hover {
+  background-color: var(--form-color);
+  color: white;
 }
 
 
@@ -166,7 +168,7 @@ img {
 
 
 ::-webkit-scrollbar {
-  height: 10px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -191,6 +193,11 @@ img {
 
 .attachments-conteinr {
   display: flex;
+}
+
+.contact-submit fa-icon {
+  font-size: 25px;
+  margin: 0px 0px 0px 8px;
 }
 
 /* ------------------------------ */
